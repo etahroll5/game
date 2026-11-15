@@ -10,6 +10,73 @@ h1{font-size:clamp(30px,5vw,48px);letter-spacing:-1.8px;line-height:1.08;margin:
 .app{display:none}.app.show{display:block}.layout{display:grid;grid-template-columns:210px 1fr;gap:25px}.side{position:sticky;top:20px;height:calc(100vh - 40px);display:flex;flex-direction:column}.nav{display:grid;gap:7px;margin-top:30px}.nav button{background:transparent;color:var(--muted);border:0;text-align:left;padding:12px;border-radius:11px}.nav button.active,.nav button:hover{background:#211c31;color:white}.side-note{margin-top:auto;color:#6f7a8c;font-size:12px}.main{min-width:0}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.head h1{font-size:28px;margin:0;letter-spacing:-.8px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:17px}.stat strong{font-size:26px;display:block;margin:8px 0 2px}.columns{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:15px}.section{margin:25px 0 12px;display:flex;justify-content:space-between;align-items:center}.searchbox{position:relative}.results{display:grid;gap:7px;margin-top:10px}.result{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}.result small{display:block;color:var(--muted);margin-top:3px}.mini{background:#27213a;border:1px solid #41375d;color:#d8ccff;border-radius:9px;padding:8px 11px}.listitem{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}.listitem:last-child{border:0}.tab{display:none}.tab.active{display:block}.chat{display:flex;flex-direction:column;gap:10px;max-height:430px;overflow:auto;margin:15px 0}.bubble{max-width:85%;padding:12px 14px;border-radius:14px;background:var(--panel2);line-height:1.5}.bubble.me{align-self:flex-end;background:#2a2340}.chatrow{display:flex;gap:8px}.chatrow input{flex:1;min-width:0}.notice{padding:13px;border:1px solid #39334a;background:#171522;color:#c9c3d7;border-radius:12px;line-height:1.5;font-size:13px;margin-top:14px}.empty{padding:20px;text-align:center;color:var(--muted)}.hidden{display:none!important}
 @media(max-width:800px){.layout{grid-template-columns:1fr}.side{position:static;height:auto}.side .nav{display:flex;overflow:auto;margin:12px 0 18px}.nav button{white-space:nowrap}.side-note{display:none}.columns{grid-template-columns:1fr}.wrap{padding:17px}.head{margin-bottom:18px}}
 @media(max-width:480px){.choices{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.panel{padding:15px}.stat{padding:13px}}
+
+/* PULSE 2.0 visual refresh */
+:root{--bg:#080912;--panel:#111322;--panel2:#191b30;--line:rgba(164,151,255,.16);--muted:#9295ad;--text:#f8f7ff;--accent:#a78bfa;--mint:#76f0cf}
+body{background:radial-gradient(ellipse at 82% -12%,rgba(125,89,255,.22),transparent 34%),radial-gradient(ellipse at 0% 45%,rgba(45,103,180,.10),transparent 32%),#080912;letter-spacing:.01em}
+.wrap{max-width:1440px;padding:30px 36px}
+.brand{display:flex;align-items:center;gap:10px;letter-spacing:3.5px}
+.brand:before{content:"";width:13px;height:13px;border-radius:4px 9px 4px 9px;background:linear-gradient(135deg,#bda5ff,#7b61ff);box-shadow:0 0 22px #8e70ff99;transform:rotate(18deg)}
+.brand span{color:#b7a1ff}
+.top{margin-bottom:34px}
+.pill{background:rgba(155,130,255,.09);border-color:rgba(174,150,255,.25);color:#d4c8ff;letter-spacing:1.2px}
+.panel,.stat{background:linear-gradient(145deg,rgba(22,24,43,.96),rgba(13,15,29,.96));border:1px solid rgba(164,151,255,.15);box-shadow:0 18px 50px rgba(0,0,0,.16)}
+.panel{border-radius:22px;padding:22px}
+.btn{background:linear-gradient(110deg,#bca8ff,#8e73ff);box-shadow:0 8px 24px #8d6dff35;border-radius:13px;transition:transform .2s,filter .2s}
+.btn:hover,.hero-cta:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.secondary,.btn.ghost{box-shadow:none}
+.onboard{max-width:760px;margin:8vh auto 0;padding:36px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(24,24,47,.92),rgba(12,14,27,.94));box-shadow:0 30px 100px #0006}
+.onboard h1{font-size:clamp(38px,6vw,58px);letter-spacing:-2.6px}
+.progress{height:6px;background:#25243b}.progress i{background:linear-gradient(90deg,#7964ff,#b8a4ff);box-shadow:0 0 15px #957bff88}
+.choice{background:rgba(255,255,255,.025);border-color:rgba(164,151,255,.16);border-radius:17px;transition:.2s}
+.choice:hover,.choice.selected{border-color:#a78bfa;background:rgba(139,111,255,.13);transform:translateY(-2px)}
+.layout{grid-template-columns:230px minmax(0,1fr);gap:32px}
+.side{padding:20px 14px;background:linear-gradient(180deg,rgba(20,21,40,.88),rgba(13,14,27,.6));border:1px solid var(--line);border-radius:24px;top:24px;height:calc(100vh - 48px)}
+.nav{gap:9px;margin-top:38px}
+.nav button{padding:14px 16px;border-radius:13px;font-weight:650;transition:.2s}
+.nav button.active,.nav button:hover{background:linear-gradient(100deg,rgba(151,121,255,.22),rgba(151,121,255,.06));color:#fff;box-shadow:inset 3px 0 #a88fff}
+.side-note{padding:14px 8px;border-top:1px solid var(--line);letter-spacing:1.1px;line-height:1.6}
+.head{margin-bottom:28px}
+.head h1{font-size:34px;letter-spacing:-1.4px}
+.stepnum{letter-spacing:2px;color:#b6a3ff}
+.grid{gap:15px}
+.stat{border-radius:19px;padding:21px;position:relative;overflow:hidden;transition:transform .22s,border-color .22s}
+.stat:hover{transform:translateY(-4px);border-color:rgba(178,154,255,.42)}
+.stat:after{content:"";position:absolute;width:100px;height:100px;right:-34px;top:-40px;border-radius:50%;background:radial-gradient(circle,#a88cff24,transparent 70%)}
+.stat strong{font-size:32px;letter-spacing:-1px}
+.columns{gap:18px;margin-top:20px}
+.section{margin:28px 0 13px}
+.section h2{letter-spacing:-.5px}
+.search,.field input,.field select{background:#0b0d1a;border-color:rgba(164,151,255,.18);border-radius:13px}
+.search:focus,.field input:focus{border-color:#9d85ff;box-shadow:0 0 0 3px #9d85ff20}
+.result{background:rgba(255,255,255,.025);border-color:rgba(164,151,255,.13);border-radius:14px;transition:.18s}
+.result:hover{background:rgba(153,126,255,.09);border-color:#8e78e9}
+.mini{background:rgba(150,125,255,.13);border-color:rgba(171,149,255,.24);color:#d9ceff}
+.notice{background:rgba(130,111,205,.08);border-color:rgba(164,151,255,.18);border-radius:15px}
+.bubble{border:1px solid rgba(164,151,255,.13);border-radius:17px}
+.bubble.me{background:linear-gradient(120deg,#33295a,#25203f)}
+.pulse-hero{min-height:275px;margin:0 0 22px;padding:34px 40px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid rgba(194,177,255,.28);border-radius:27px;background:radial-gradient(ellipse at 78% 50%,rgba(166,135,255,.32),transparent 38%),linear-gradient(112deg,#28214c 0%,#171a36 48%,#111426 100%);box-shadow:0 24px 70px #0005}
+.pulse-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.035) 50%,transparent 65%);pointer-events:none}
+.hero-copy{position:relative;z-index:2;max-width:560px}
+.hero-kicker{font-size:10px;font-weight:800;letter-spacing:2px;color:#d1c6ff;display:flex;align-items:center;gap:9px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#80f0cf;box-shadow:0 0 12px #80f0cf}
+.pulse-hero h2{font-size:clamp(42px,5vw,62px);line-height:.98;letter-spacing:-3px;margin:20px 0 13px}
+.pulse-hero h2 em{font-style:normal;color:#bca9ff}
+.pulse-hero p{color:#c0bfd7;font-size:14px;line-height:1.6;margin:0;max-width:390px}
+.hero-actions{display:flex;align-items:center;gap:18px;margin-top:25px;flex-wrap:wrap}
+.hero-cta{border:0;border-radius:12px;padding:13px 17px;background:#c3b1ff;color:#171126;font-weight:850;box-shadow:0 8px 25px #a88aff35;transition:.2s}
+.hero-cta span{padding-left:14px}
+.hero-caption{font-size:9px;letter-spacing:1.6px;color:#aaa5c8}
+.hero-art{width:250px;height:210px;flex:0 0 250px;position:relative;display:grid;place-items:center}
+.orbit{position:absolute;border:1px solid rgba(201,185,255,.35);border-radius:50%;transform:rotate(-28deg)}
+.orbit-one{width:220px;height:110px;box-shadow:0 0 40px #9274ff1c}
+.orbit-two{width:170px;height:205px;transform:rotate(58deg);border-color:rgba(123,226,210,.28)}
+.orbit-core{width:100px;height:100px;border-radius:32px;display:grid;place-items:center;background:linear-gradient(145deg,#c6b4ff,#8064ed);box-shadow:0 0 65px #9678ff88,inset 0 2px 4px #fff8;transform:rotate(-12deg)}
+.orbit-core span{font-size:48px;color:#fff;transform:rotate(12deg);text-shadow:0 4px 15px #4c368d}
+.orbit-tag{position:absolute;font-size:8px;letter-spacing:1.5px;color:#d5cbff;background:#171831bd;border:1px solid #b5a2ff44;padding:7px 10px;border-radius:30px}
+.tag-top{top:8px;right:0}.tag-bottom{bottom:8px;left:0;color:#a8eddb}
+@media(max-width:900px){.wrap{padding:18px}.layout{grid-template-columns:1fr}.side{height:auto;position:static;padding:14px}.side .nav{display:flex;overflow:auto;margin:16px 0 0}.side-note{display:none}.pulse-hero{padding:27px}.hero-art{width:180px;flex-basis:180px;transform:scale(.85)}}
+@media(max-width:560px){.pulse-hero{padding:24px;min-height:0}.hero-art{display:none}.pulse-hero h2{font-size:45px}.onboard{padding:24px 18px;margin-top:3vh}.grid{grid-template-columns:1fr 1fr}.head h1{font-size:28px}}
 </style></head><body>
 <div class="wrap">
 <header class="top"><div class="brand">PUL<span>SE</span></div><span class="pill">YOUR TRAINING SPACE</span></header>
@@ -22,7 +89,7 @@ h1{font-size:clamp(30px,5vw,48px);letter-spacing:-1.8px;line-height:1.08;margin:
 <div id="app" class="app">
  <div class="layout"><aside class="side"><div class="brand">PUL<span>SE</span></div><nav class="nav"><button class="active" data-tab="home">⌂ &nbsp; Home</button><button data-tab="workouts">↗ &nbsp; Workouts</button><button data-tab="coach">✦ &nbsp; Coach</button><button data-tab="history">▤ &nbsp; History</button><button data-tab="settings">⚙ &nbsp; Settings</button></nav><div class="side-note">FREE COACH · BUILD GOOD HABITS</div></aside>
  <main class="main">
- <section id="home" class="tab active"><div class="head"><div><div class="stepnum">YOUR DAY</div><h1 id="hello">Welcome back</h1><div class="muted tiny" id="date"></div></div><span class="pill">● ALL SET</span></div>
+ <section id="home" class="tab active"><div class="pulse-hero"><div class="hero-copy"><div class="hero-kicker"><span class="live-dot"></span> YOUR PERSONAL TRAINING SPACE</div><h2>Make today<br><em>count.</em></h2><p>Small steps. Stronger habits. Your next session starts here.</p><div class="hero-actions"><button class="hero-cta" onclick="switchTab('workouts')">Explore workouts <span>↗</span></button><span class="hero-caption">BUILT AROUND YOUR GOALS</span></div></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>✦</span></div><div class="orbit-tag tag-top">MOVE WITH PURPOSE</div><div class="orbit-tag tag-bottom">PULSE / 01</div></div></div><div class="head"><div><div class="stepnum">YOUR DAY</div><h1 id="hello">Welcome back</h1><div class="muted tiny" id="date"></div></div><span class="pill">● ALL SET</span></div>
  <div class="grid"><div class="stat"><span class="muted tiny">Workouts this week</span><strong id="week">0</strong><span class="muted tiny">Sessions logged</span></div><div class="stat"><span class="muted tiny">Active time</span><strong id="mins">0</strong><span class="muted tiny">Minutes recorded</span></div><div class="stat"><span class="muted tiny">Meals today</span><strong id="mealsCount">0</strong><span class="muted tiny">Food diary entries</span></div></div>
  <div class="columns"><div>
  <div class="section"><h2>Log food</h2><span class="muted tiny">Search and add</span></div><div class="panel"><div class="searchbox"><input class="search" id="foodsearch" placeholder="Search food, e.g. banana, oats, eggs…" oninput="searchFood()"></div><div id="foodresults" class="results"></div><div class="tiny muted" style="margin-top:10px">You can add a food by name if it isn't listed. Nutrition values are optional estimates, not targets.</div></div>
